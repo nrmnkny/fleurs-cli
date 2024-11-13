@@ -11,7 +11,7 @@ function NewPostForm({ onPostCreated }) {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token'); // Retrieve the JWT token
-      const response = await fetch('http://localhost:5000/api/admin/posts', {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/admin/posts`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

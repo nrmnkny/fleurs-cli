@@ -28,7 +28,7 @@ function AdminPanel({ onLogout, posts, fetchPosts }) {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/posts', {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/posts`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ function AdminPanel({ onLogout, posts, fetchPosts }) {
     };
 
     try {
-      const response = await fetch(`http://localhost:5000/api/posts/${editPostId}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/posts/${editPostId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ function AdminPanel({ onLogout, posts, fetchPosts }) {
 
   const handleDeletePost = async (postId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/posts/${postId}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/posts/${postId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
