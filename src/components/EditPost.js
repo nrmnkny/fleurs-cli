@@ -1,4 +1,3 @@
-// src/components/EditPost.js
 import React, { useState, useEffect } from 'react';
 
 function EditPost({ post, onSave }) {
@@ -19,9 +18,9 @@ function EditPost({ post, onSave }) {
       <textarea value={body} onChange={(e) => setBody(e.target.value)} />
       <input type="text" value={imageURL} onChange={(e) => setImageURL(e.target.value)} />
       <select value={categoryId} onChange={(e) => setCategoryId(Number(e.target.value))}>
-        <option value="1">Artbucks</option>
-        <option value="2">Debate Pit</option>
-        <option value="3">Fleurs du Mal</option>
+      <option value="1">Infinity Mind Script</option>
+        <option value="2">Personal Journal</option>
+        <option value="3">Interests & Insights</option>
       </select>
       <button type="submit">Save Changes</button>
     </form>

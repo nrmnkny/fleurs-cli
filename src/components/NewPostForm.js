@@ -10,12 +10,12 @@ function NewPostForm({ onPostCreated }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const token = localStorage.getItem('token'); // Retrieve the JWT token
+      const token = localStorage.getItem('token'); 
       const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/admin/posts`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`, // Include the token in the request header
+          'Authorization': `Bearer ${token}`, 
         },
         body: JSON.stringify({
           Title: title,
@@ -26,7 +26,7 @@ function NewPostForm({ onPostCreated }) {
       });
       if (response.ok) {
         const newPost = await response.json();
-        onPostCreated(newPost); // Callback to update the post list on success
+        onPostCreated(newPost); 
         setTitle('');
         setBody('');
         setImageURL('');
@@ -66,9 +66,9 @@ function NewPostForm({ onPostCreated }) {
         required
       >
         <option value="">Select Category</option>
-        <option value="1">Artbucks</option>
-        <option value="2">Debate Pit</option>
-        <option value="3">Fleurs du Mal</option>
+        <option value="1">Infinity Mind Script</option>
+        <option value="2">Personal Journal</option>
+        <option value="3">Interests & Insights</option>
       </select>
       <button type="submit">Create Post</button>
     </form>

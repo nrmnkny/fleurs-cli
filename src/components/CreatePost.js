@@ -1,4 +1,3 @@
-// src/components/CreatePost.js
 import React, { useState } from 'react';
 
 function CreatePost({ onSave }) {
@@ -19,9 +18,9 @@ function CreatePost({ onSave }) {
       <textarea placeholder="Body" value={body} onChange={(e) => setBody(e.target.value)} />
       <input type="text" placeholder="Image URL" value={imageURL} onChange={(e) => setImageURL(e.target.value)} />
       <select value={categoryId} onChange={(e) => setCategoryId(Number(e.target.value))}>
-        <option value="1">Artbucks</option>
-        <option value="2">Debate Pit</option>
-        <option value="3">Fleurs du Mal</option>
+        <option value="1">Infinity Mind Script</option>
+        <option value="2">Personal Journal</option>
+        <option value="3">Interests & Insights</option>
       </select>
       <button type="submit">Save Post</button>
     </form>

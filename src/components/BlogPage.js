@@ -1,4 +1,3 @@
-// src/components/BlogPage.js
 import React, { useState } from 'react';
 import Header from './Header';
 
@@ -6,7 +5,6 @@ function BlogPage({ posts, onViewPost }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [filter, setFilter] = useState('All');
 
-  // Function to remove HTML tags from a string
   const stripHtmlTags = (html) => {
     return html.replace(/<\/?[^>]+(>|$)/g, "");
   };
@@ -18,7 +16,7 @@ function BlogPage({ posts, onViewPost }) {
 
   return (
     <div className="blog-page">
-      <Header text="3am.VeiN" />
+      <Header text="infinity mind script" />
       <div className="search-bar mb-4">
         <input
           type="text"
@@ -31,9 +29,9 @@ function BlogPage({ posts, onViewPost }) {
           className="p-2 border border-gray-300 rounded"
         >
           <option value="All">All Categories</option>
-          <option value="1">Artbucks</option>
-          <option value="2">Debate Pit</option>
-          <option value="3">Fleurs du Mal</option>
+          <option value="1">Infinity Mind Script</option>
+        <option value="2">Personal Journal</option>
+        <option value="3">Interests & Insights</option>
         </select>
       </div>
 
